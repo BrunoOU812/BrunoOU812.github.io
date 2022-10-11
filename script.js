@@ -31,8 +31,7 @@ const next=()=>{
     size.unshift(first);
     circle.forEach((item,i)=>item.classList.add(size[i]));
 } 
-// s
 
 
-document.querySelector(".projects__widget--left").addEventListener("click",prev);
-document.querySelector(".projects__widget--right").addEventListener("click",next);
+document.querySelector(".projects__widget--left").addEventListener("click",()=>index>0?prev():"");
+document.querySelector(".projects__widget--right").addEventListener("click",()=>index<4?next():"");

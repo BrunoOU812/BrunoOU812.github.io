@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow: hidden;
+}
+
 strong {
   font-weight: 400;
 }
