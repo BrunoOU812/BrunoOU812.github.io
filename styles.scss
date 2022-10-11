@@ -2,8 +2,9 @@
     margin: 0;
     font-family: 'montserrat';
     font-weight: 100;
-    font-size: 28px;
+    font-size: 18px;
     scroll-behavior: smooth;
+    text-align: justify;
     // scroll-padding-top: calc($nav-height + 25px);
 }
 body{
@@ -87,15 +88,17 @@ strong{
     }
     &__h3 {
         // font-family: 'abril fatface';
-        font-size: 50px;
+    // font-weight: 400;
+    font-size: 50px;
         margin: 0;
+        margin-bottom: 10px;
         width: 720px;
     }
     &__icons {
         display: flex;
         justify-content: space-between;
         width: 120px;
-        height: 70px;
+        height: 60px;
     }
     &__img {
             @include transition;
@@ -119,9 +122,9 @@ strong{
       justify-content:space-between;
       max-width:720px;
       height: 420px;
-      padding: 0 20px;
     }
   &__p {
+    font-weight: 400;
     width: calc(100% - (20px * 2));
   }
   &__project {

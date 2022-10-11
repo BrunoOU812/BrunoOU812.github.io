@@ -2,8 +2,9 @@
   margin: 0;
   font-family: "montserrat";
   font-weight: 100;
-  font-size: 28px;
+  font-size: 18px;
   scroll-behavior: smooth;
+  text-align: justify;
 }
 
 body {
@@ -100,6 +101,7 @@ strong {
 .projects__h3 {
   font-size: 50px;
   margin: 0;
+  margin-bottom: 10px;
   width: 720px;
 }
 .projects__icons {
@@ -110,7 +112,7 @@ strong {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 120px;
-  height: 70px;
+  height: 60px;
 }
 .projects__img {
   -webkit-transition: all 300ms ease-in-out;
@@ -144,9 +146,9 @@ strong {
           justify-content: space-between;
   max-width: 720px;
   height: 420px;
-  padding: 0 20px;
 }
 .projects__p {
+  font-weight: 400;
   width: calc(100% - 40px);
 }
 .projects__project {
