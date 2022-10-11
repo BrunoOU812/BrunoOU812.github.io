@@ -30,7 +30,8 @@ const next=()=>{
     let first=size.pop();
     size.unshift(first);
     circle.forEach((item,i)=>item.classList.add(size[i]));
-}
+} 
+// s
 
 
 document.querySelector(".projects__widget--left").addEventListener("click",prev);
