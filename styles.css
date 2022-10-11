@@ -8,18 +8,147 @@
 }
 
 body {
-  overflow: hidden;
+  scroll-padding-top: 1000px;
 }
 
 strong {
   font-weight: 400;
 }
 
-.projects {
-  border: 1px solid black;
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-image: url("background.jpg");
+  background-size: 250vh;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__background {
+  padding: 100px;
+  background: linear-gradient(45deg, rgba(0, 0, 255, 0.3), rgba(255, 0, 255, 0.3), rgba(255, 102, 0, 0.3), rgba(255, 255, 0, 0.3) 85.71%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: calc(100% - 200px);
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1000px;
+}
+.header__h1 {
+  font-family: "abril fatface";
+  padding: 5px 20px;
+  font-size: 100px;
+  color: white;
+  background-color: #000000;
+  display: inline;
+}
+.header__h2 {
+  z-index: 1;
+  margin-bottom: -30px;
+  padding: 10px 20px;
+  font-size: 50px;
+  color: white;
+  background-color: #000000;
+  display: inline;
+}
+.nav {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 2;
+  color: white;
+  background-color: black;
+  padding: 0 30px;
+  height: 100px;
+  width: 96vw;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav__a {
+  text-decoration: none;
+}
+.nav__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95px;
+}
+.nav__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40px;
+}
+.nav__img--linkedin {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0px 0px;
+     object-position: 0px 0px;
+}
+.nav__logo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 40px;
+}
+.nav__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 640px;
+}
+.nav__li {
+  list-style: none;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+.nav__li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.projects {
+  overflow: hidden;
+  padding-top: 95px;
+  bottom: -100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50px 620px 50px;
+  grid-template-rows: 50px 620px 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -30,28 +159,28 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  height: 100vh;
-  max-height: 100vh;
+  max-width: 100vw;
+  height: 80vh;
 }
 .projects__circles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 50px;
-  width: 300px;
+  width: 100%;
 }
 .projects__circle {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   background-color: black;
   border-radius: 50%;
+  margin: 0 20px;
 }
 .projects__circle--0 {
   height: 25px;
