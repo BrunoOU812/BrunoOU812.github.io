@@ -5,10 +5,13 @@
     font-size: 18px;
     scroll-behavior: smooth;
     text-align: justify;
+    // scroll-padding-top: 100px;
+
 }
+
 body{
-    scroll-padding-top: 1000px;
 }
+
 strong{
     font-weight: 400;
 }
@@ -84,13 +87,19 @@ strong{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 95px;
+        width: 160px;
     }
     &__img{
         object-fit: cover;
     width: 40px;
         &--linkedin {
             filter: brightness(10);
+            object-fit: cover;
+            object-position: 0px 0px;
+        }
+        &--fcc {
+            margin-left: -10px;
+            width: 45px;
             object-fit: cover;
             object-position: 0px 0px;
         }
@@ -102,7 +111,6 @@ strong{
     &__ul{
         display: flex;
         align-items: center;
-        // justify-content: space-between;
         justify-content: center;
         width: 640px;
     }
