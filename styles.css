@@ -5,10 +5,16 @@
   font-size: 18px;
   scroll-behavior: smooth;
   text-align: justify;
+  scroll-padding-top: 10vh;
 }
 
 strong {
   font-weight: 400;
+}
+
+.footer {
+  height: 30vh;
+  background: #000000;
 }
 
 .header {
@@ -69,7 +75,7 @@ strong {
   color: white;
   background-color: black;
   padding: 0 30px;
-  height: 100px;
+  height: 10vh;
   width: 96vw;
   position: fixed;
   display: -webkit-box;
@@ -146,7 +152,6 @@ strong {
 }
 
 .projects {
-  overflow: hidden;
   padding-top: 95px;
   bottom: -100px;
   display: -ms-grid;
@@ -163,8 +168,7 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 100vw;
-  height: 80vh;
+  max-height: 90vh;
 }
 .projects__circles {
   display: -webkit-box;
@@ -177,7 +181,6 @@ strong {
       -ms-flex-align: center;
           align-items: center;
   height: 50px;
-  width: 100%;
 }
 .projects__circle {
   -webkit-transition: all 300ms ease-in-out;
@@ -218,12 +221,12 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 100%;
   margin: 5vw 0;
 }
 .projects__h2 {
   padding: 0;
-  width: 1980px;
+  width: 100%;
   text-align: center;
   font-size: 100px;
 }
