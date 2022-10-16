@@ -54,7 +54,7 @@ document.addEventListener('scroll', (e) => {
     if(window.scrollY>1747&&window.scrollY<3695){
         document.querySelector(".who").style.transform=`translateX(calc(-1 * (${window.scrollY-1747}px )))`
         document.querySelector(".technologies").style.transform=`translateX(calc(-1 * (${window.scrollY-(3668)}px )))`
-    }
+    }  
     else{
         document.querySelector(".who").style.transform=`translateX(0))`
         // document.querySelector(".whotech").classList.remove(`whotech--hover`);
