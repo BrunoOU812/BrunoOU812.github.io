@@ -36,12 +36,33 @@ document.querySelector(".projects__widget--right").addEventListener("click",()=>
 
 
 document.addEventListener('scroll', (e) => {
-    if(window.scrollY>500){
+    console.log(window.scrollY)
+    if(window.scrollY>500&&window.scrollY<1200){
         document.querySelector(".nav").style.backgroundColor = "rgba( 0,0,0,0.3)";
     }
     else{
         document.querySelector(".nav").style.backgroundColor = "rgba( 0,0,0,1)";
     };
+    if(window.scrollY>800){
+        document.querySelector(".whotech").classList.add(`whotech--hover`);
+    }
+    else{
+        document.querySelector(".whotech").classList.remove(`whotech--hover`);
+    };
+    document.querySelector(".who").style.transform=`translateX(0))`
+
+    if(window.scrollY>1747&&window.scrollY<3695){
+        document.querySelector(".who").style.transform=`translateX(calc(-1 * (${window.scrollY-1747}px )))`
+        document.querySelector(".technologies").style.transform=`translateX(calc(-1 * (${window.scrollY-(3668)}px )))`
+    }
+    else{
+        document.querySelector(".who").style.transform=`translateX(0))`
+        // document.querySelector(".whotech").classList.remove(`whotech--hover`);
+    };
+    if(window.scrollY>4160){
+        document.querySelector(".technologies").style.transform=`translateY(calc(-1 * (${window.scrollY-(4170)}px )))`
+        // document.querySelector(".whotech").style.transform=`translateY(${window.scrollY-4160}px))`;
+    }
   });
 
   document.addEventListener('scroll', () => {
@@ -49,3 +70,29 @@ document.addEventListener('scroll', (e) => {
         window.scrollY>=870?scrolled=true:""
         console.log(scrolled);
     })
+
+const totalNodes = document.querySelectorAll(".projects__page").length;
+
+for (let i = 0; i < totalNodes; i++) {
+    console.log(i);
+    document.querySelectorAll(".projects__page")[i].classList.add(`projects__page--${i}`);
+    
+    document.querySelectorAll(".projects__clickhere")[i].classList.add(`projects__clickhere--${i}`);
+    document.querySelectorAll(".projects__a")[i].classList.add(`projects__a--${i}`);
+    document.querySelectorAll(".projects__new")[i].classList.add(`projects__new--${i}`);
+}
+
+for(let i = 0; i < totalNodes; i++){
+    document.querySelector(`.projects__page--${i}`).addEventListener("mouseover", function(){
+        console.log("hallo")
+            document.querySelector(`.projects__clickhere--${i}`).classList.add("projects__clickhere--hover");
+            document.querySelector(`.projects__a--${i}`).classList.add("projects__a--hover");
+            document.querySelector(`.projects__new--${i}`).classList.add("projects__new--hover");
+        });
+        
+    document.querySelector(`.projects__page--${i}`).addEventListener("mouseout", function(){
+            document.querySelector(`.projects__clickhere--${i}`).classList.remove("projects__clickhere--hover");
+            document.querySelector(`.projects__a--${i}`).classList.remove("projects__a--hover");
+            document.querySelector(`.projects__new--${i}`).classList.remove("projects__new--hover");
+    });
+}

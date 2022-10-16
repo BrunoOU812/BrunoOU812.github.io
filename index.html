@@ -8,7 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alkalami&family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">  
+  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
 <title>Bruno Morgades Web Developer</title>
 </head>
 <body style="box-sizing:border-box; margin:0;">
@@ -20,21 +21,21 @@
             <a class="nav__a" href="#latest">
                 <li class="nav__li">Latest Projects</li>
             </a>
-            <!-- <a class="nav__a" href="">
+            <a class="nav__a" href="#who">
                 <li class="nav__li">Who am i?</li>
             </a>
-            <a class="nav__a" href="">
+            <a class="nav__a" href="#technology">
                 <li class="nav__li">Technologies</li>
-            </a> -->
+            </a>
         </ul>
         <div class="nav__icons">
             <a href="https://github.com/BrunoOU812" target="_blank"><img src="GitHub-Mark-Light-64px.png" alt="" class="nav__img"></a>
             <a href="https://www.linkedin.com/in/brunomorgades/" target="_blank"> <img src="LI-In-Bug.png" alt="" class="nav__img nav__img--linkedin"></a>
-            <a href="https://www.freecodecamp.org/certification/BrunoOU812/javascript-algorithms-and-data-structures" target="_blank"> <img src="fcc_primary_small.svg" alt="" class="nav__img nav__img--fcc"></a>
+            <!-- <a href="https://www.freecodecamp.org/certification/BrunoOU812/javascript-algorithms-and-data-structures" target="_blank"> <img src="fcc_primary_small.svg" alt="" class="nav__img nav__img--fcc"></a> -->
            
         </div>        
     </nav>
-    <header class="header" id="header">
+    <header class="header" >
         <div class="header__background">
             <div class="header__container">
                 <h2 class="header__h2">Bruno Morgades</h2>
@@ -42,14 +43,23 @@
             </div>
         </div>
     </header>
+    <div id="header" style="height:100vh; background-color: transparent;"></div>
     <main class="projects" id="latest">
         <h2 class="projects__h2">Latest <strong class="projects__h2--strong">Projects</strong></h2>
         <div class="projects__display">
         <div class="projects__widget projects__widget--left">&lt;</div>
         <div class="projects__container">
             <div class="projects__project">
-                <a href="https://activoparttwo.netlify.app/" target="_blank"><iframe class="projects__screenshot" src="https://activoparttwo.netlify.app/" scrolling="no"></iframe></a>
+            <div class="projects__page" >
+                <a href="https://activoparttwo.netlify.app/" target="_blank">
+                    <div class="projects__clickhere"><span class="material-symbols-outlined projects__new">
+                        open_in_new
+                        </span></div>
+                    <div class="projects__a" ><iframe class="projects__screenshot" src="https://activoparttwo.netlify.app/" scrolling="no"></iframe>
+                    </div>
+                </a>
                 
+            </div>    
                 <div class="projects__infobox">
                     <h3 class="projects__h3">Ignition Casino</h3>
                     <p class="projects__p">Interview project for a web developing company, the project consisted of developing a casino web page following the design of a given mockup with all the necesary assets.<br/><br/>
@@ -63,9 +73,18 @@
                            
                         </div>
                 </div>
+
             </div>
             <div class="projects__project">
-                <a href="https://activopartone.netlify.app/" target="_blank"  ><iframe class="projects__screenshot" src="https://activopartone.netlify.app/" scrolling="no"></iframe></a>
+                
+            <div class="projects__page" >
+                <a href="https://activopartone.netlify.app/" target="_blank"  >
+                    <div class="projects__clickhere"><span class="material-symbols-outlined projects__new">
+                        open_in_new
+                        </span></div>
+                    <div class="projects__a" ><iframe class="projects__screenshot" src="https://activopartone.netlify.app/" scrolling="no"></iframe>
+                    </div></a>
+        </div>
                 
                 <div class="projects__infobox">
                     <h3 class="projects__h3">Bitcoin Price API</h3>
@@ -78,8 +97,17 @@
                            
                         </div>
                 </div>
+
             </div>
-            <div class="projects__project"><a  target="_blank" href="https://generic-survey-form.netlify.app"><iframe class="projects__screenshot" src="https://generic-survey-form.netlify.app" scrolling="no"></iframe></a>
+            <div class="projects__project">
+                <div class="projects__page" >
+                <a  target="_blank" href="https://generic-survey-form.netlify.app">
+                    <div class="projects__clickhere"><span class="material-symbols-outlined projects__new">
+                        open_in_new
+                        </span></div>
+                    <div class="projects__a" ><iframe class="projects__screenshot" src="https://generic-survey-form.netlify.app" scrolling="no"></iframe>
+                    </div></a>
+        </div>
                 
                 <div class="projects__infobox">
                     <h3 class="projects__h3">Survey Form</h3>
@@ -93,8 +121,17 @@
                            
                         </div>
                 </div>
+
             </div>
-            <div class="projects__project"><a  target="_blank" href="https://elbloguito.netlify.app"><iframe class="projects__screenshot" src="https://elbloguito.netlify.app/blog" scrolling="no"></iframe></a>
+            <div class="projects__project">
+                <div class="projects__page" >
+                    <a  target="_blank" href="https://elbloguito.netlify.app">
+                        <div class="projects__clickhere"><span class="material-symbols-outlined projects__new">
+                            open_in_new
+                            </span></div>
+                    <div class="projects__a" ><iframe class="projects__screenshot" src="https://elbloguito.netlify.app/blog" scrolling="no"></iframe>
+                    </div></a>
+        </div>
                 
                 <div class="projects__infobox">
                     <h3 class="projects__h3">React Based Page</h3>
@@ -107,8 +144,17 @@
                            
                         </div>
                 </div>
+
             </div>
-            <div class="projects__project"><a  target="_blank" href="https://csslab.netlify.app"><iframe class="projects__screenshot" src="https://csslab.netlify.app" scrolling="no"></iframe></a>
+            <div class="projects__project">
+                <div class="projects__page" >
+                <a  target="_blank" href="https://csslab.netlify.app">
+                    <div class="projects__clickhere"><span class="material-symbols-outlined projects__new">
+                        open_in_new
+                        </span></div>
+                    <div class="projects__a" ><iframe class="projects__screenshot" src="https://csslab.netlify.app" scrolling="no"></iframe>
+            </div></a>
+        </div>
                 
                 <div class="projects__infobox">
                     <h3 class="projects__h3">CSS Lab</h3>
@@ -122,6 +168,7 @@
                         </div>
                 </div>
             </div>
+
         </div>
         <div class="projects__widget projects__widget--right">&gt;</div>
     </div>
@@ -132,49 +179,63 @@
         <div class="projects__circle projects__circle--2"></div>
         <div class="projects__circle projects__circle--2"></div>
     </div>
-    </section>
-    
-    
-    <section class="who">
-        <img class="who__img" src="" alt="">
-        <div class="who__container">
-            <h2 class="who__h2"></h2>
-            <p class="who__p"></p>
-        </div>
-    </section>
-    <section class="technologies">
-        
-            <h2 class="technologies__h2"></h2>
+    </main>    
+    <div id="who" style="height:100vh; background-color: transparent;"></div>
+    <div class="whotech">
+        <section class="who">
+            <div class="who__container">
+                <img class="who__img" src="Bruno Morgades.jpg" alt="">
+                <h2 class="who__h2">Who <spam class="who__h2--sans">am i?</spam></h2>
+            </div>
+            <div class="who__paragraph">
+                <p class="who__p">Im a graduated Product Designer Bacherlor from Universidad ORT Uruguay (2022) who decided to take the web developer route.
+                    <br><br>                
+                    Being a creative individual who is fascinated with the creation of digital products focused on the Frontend side.
+                    <br><br>
+                    I’ve taken this route to web development in spite of being difficult because i really enjoy the power of creation that this field has to offer, it allows me to take advantage of the rapid development of these technologies by only having access to a laptop.
+                    <br><br>
+                    Constantly learning new stuff and adding a new knowledge to my toolkit, trying to improve myself, and taking what i understand to be useful for the client.
+                    <br><br>
+                    Always looking for new experiences that make a better professional and allow me to understand what the client really needs.
+                </p>
+            </div>
+        </section>
+        <section class="technologies" >        
+            <h2 class="technologies__h2">Technologies</h2>
             <div>
                 <div class="technologies__container">
                     <div>
-                        <img class="technologies__img" src="" alt="">
-                        <h3 class="technologies__h3"></h3>
+                        <img class="technologies__img" src="HTML5_logo.png" alt="">
+                        <h3 class="technologies__h3">Html</h3>
                     </div>
                     <div>
-                        <img class="technologies__img" src="" alt="">
-                        <h3 class="technologies__h3"></h3>
+                        <img class="technologies__img" src="-CSS3_logo.png" alt="">
+                        <h3 class="technologies__h3">Css</h3>
                     </div>
                     <div>
-                        <img class="technologies__img" src="" alt="">
-                        <h3 class="technologies__h3"></h3>
+                        <img class="technologies__img" src="JavaScript-logo.png" alt="">
+                        <h3 class="technologies__h3">Javascript</h3>
                     </div>
                     <div>
-                        <img class="technologies__img" src="" alt="">
-                        <h3 class="technologies__h3"></h3>
+                        <img class="technologies__img" src="Git-Icon-1788C.png" alt="">
+                        <h3 class="technologies__h3">Git</h3>
                     </div>
                     <div>
-                        <img class="technologies__img" src="" alt="">
-                        <h3 class="technologies__h3"></h3>
+                        <img class="technologies__img" src="sass logo.png" alt="">
+                        <h3 class="technologies__h3">Sass</h3>
                     </div>
                     <div>
-                        <img class="technologies__img" src="" alt="">
-                        <h3 class="technologies__h3"></h3>
+                        <img class="technologies__img" src="React-icon.svg.png" alt="">
+                        <h3 class="technologies__h3">React</h3>
                     </div>
                 </div>
             </div>
-        
-    </main>
+        </section>
+    </div>
+    <div id="" style="height:30vh; background-color: transparent;"></div>  
+    <div id="technology" style="height:130vh; background-color: transparent;"></div>  
+    <!-- <div id="footer" style="height:30vh; background-color: transparent;"></div>   -->
+
     <footer class="footer">
 
     </footer>
