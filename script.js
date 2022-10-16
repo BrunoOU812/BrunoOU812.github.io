@@ -50,10 +50,13 @@ document.addEventListener('scroll', (e) => {
         document.querySelector(".whotech").classList.remove(`whotech--hover`);
     };
     document.querySelector(".who").style.transform=`translateX(0))`
-
+window=100
+        0
     if(window.scrollY>1747&&window.scrollY<3695){
-        document.querySelector(".who").style.transform=`translateX(calc(-1 * (${window.scrollY-1747}px )))`
-        document.querySelector(".technologies").style.transform=`translateX(calc(-1 * (${window.scrollY-(3668)}px )))`
+        // document.querySelector(".who").style.transform=`translateX(calc(-1 * (${window.scrollY-1747}px )))`
+        document.querySelector(".technologies").style.transform=`translateX(calc(-1 * (${window.scrollY-(3668)}px )))`;
+        // console.log(`eee aca ${(-1*((-1*((window.scrollY-(3668))/1000))-1))}`)
+        // document.querySelector(".technologies").style.opacity=`${(-1*((-1*((window.scrollY-(3668))/1000))-1))}`
     }  
     else{
         document.querySelector(".who").style.transform=`translateX(0))`
