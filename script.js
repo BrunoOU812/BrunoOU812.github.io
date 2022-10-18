@@ -43,33 +43,21 @@ document.addEventListener('scroll', (e) => {
     else{
         document.querySelector(".nav").style.backgroundColor = "rgba( 0,0,0,1)";
     };
-    if(window.scrollY>800){
+    if(window.scrollY>((window.innerHeight)-(((window.innerHeight)/100)*11))){
         document.querySelector(".whotech").classList.add(`whotech--hover`);
     }
     else{
         document.querySelector(".whotech").classList.remove(`whotech--hover`);
     };
-    document.querySelector(".who").style.transform=`translateX(0))`
-window=100
-        0
     if(window.scrollY>1747&&window.scrollY<3695){
-        // document.querySelector(".who").style.transform=`translateX(calc(-1 * (${window.scrollY-1747}px )))`
         document.querySelector(".technologies").style.transform=`translateX(calc(-1 * (${window.scrollY-(3668)}px )))`;
     }  
-    else{
-        document.querySelector(".who").style.transform=`translateX(0))`
-        // document.querySelector(".whotech").classList.remove(`whotech--hover`);
-    };
-    if(window.scrollY>4160){
-        document.querySelector(".technologies").style.transform=`translateY(calc(-1 * (${window.scrollY-(4170)}px )))`
-        // document.querySelector(".whotech").style.transform=`translateY(${window.scrollY-4160}px))`;
-    }
   });
 
   document.addEventListener('scroll', () => {
         index<4?window.scrollY>=870?scrolled==false?next():"":"":"";
         window.scrollY>=870?scrolled=true:""
-        console.log(scrolled);
+        // console.log(scrolled);
     })
 
 const totalNodes = document.querySelectorAll(".projects__page").length;
