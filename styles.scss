@@ -306,6 +306,9 @@ strong{
         padding-bottom: 0.5vh;
         // font-size: 5vw;
       }
+      &:hover{
+        cursor: pointer;
+      }
     }
     
 }
@@ -602,7 +605,7 @@ strong{
   }
 }
 .technologies {
-    transform: translateX(100vw);
+    // transform: translateX(100vw);
     display: flex;
     top: 10vh;
     width: 100vw;
@@ -620,7 +623,9 @@ strong{
       top: 8vh;
     }
     @include responsive($responsive){
-      padding-top: 5vh;
+    transform: translateX(0);
+    transform: translateY(100vh);
+    padding-top: 5vh;
     }
   &__container {
     display: flex;
@@ -752,6 +757,9 @@ strong{
     width:90vw; 
     height:80vh; 
     overflow:hidden;
+    @include responsive($responsive){
+
+    }
     &--hover{
       opacity: 1;
     }
