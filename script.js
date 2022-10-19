@@ -49,7 +49,7 @@ document.addEventListener('scroll', (e) => {
     else{
         document.querySelector(".nav").style.backgroundColor = "rgba( 0,0,0,1)";
     };
-    if(window.scrollY>((window.innerHeight)-(((window.innerHeight)/100)*11))){
+    if(window.scrollY>((window.innerHeight)-(((window.innerHeight)/100)*10.9))){
         document.querySelector(".whotech").classList.add(`whotech--hover`);
     }
     else{
@@ -91,3 +91,19 @@ for(let i = 0; i < totalNodes; i++){
             document.querySelector(`.projects__new--${i}`).classList.remove("projects__new--hover");
     });
 }
+
+let switchContent=true;
+const values=(open,close,visibility)=>{
+    document.querySelector("#open").style.display=open;
+    document.querySelector("#close").style.display=close;
+    document.querySelector(".header__ul").style.visibility=visibility;
+}
+const hamburguer = ()=>{
+    switchContent=!switchContent;
+    const open= switchContent==false?"none":"block";
+    const close= switchContent==true?"none":"block";
+    const visibility= switchContent==true?"hidden":"visible";    
+    values(open,close,visibility);
+}
+document.querySelector(".nav__button--hamburguer").addEventListener("click",hamburguer);
+  
