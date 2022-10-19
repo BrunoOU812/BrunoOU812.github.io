@@ -251,7 +251,9 @@ strong{
           padding: 0;
           position: fixed;
           top: 8vh;
-          background: #000000;
+          background:rgba($color: #000000, $alpha: 0.8) ;
+          // filter: blur(2px) saturate(100%) brightness(100%);
+
           min-width: 100vw;
           flex-wrap: wrap;
         }

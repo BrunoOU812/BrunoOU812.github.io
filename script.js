@@ -105,6 +105,9 @@ const hamburguer = ()=>{
     const visibility= switchContent==true?"hidden":"visible";    
     values(open,close,visibility);
 }
+document.querySelector(".nav__ul").style.visibility="hidden";
+values("block","none","hidden");
+document.querySelector(".nav__ul").addEventListener("click",hamburguer);
 document.querySelector(".nav__button--hamburguer").addEventListener("click",hamburguer);
   
 
