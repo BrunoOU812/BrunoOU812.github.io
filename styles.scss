@@ -356,7 +356,7 @@ strong{
             height: $radius;
             width: $radius;
             @include responsive($responsive){
-              $radius:20px;
+              $radius:15px;
               height: $radius;
               width: $radius;
             }
@@ -365,7 +365,7 @@ strong{
             height: 20px;
             width: 20px;
             @include responsive($responsive){
-              $radius:15px;
+              $radius:10px;
               height: $radius;
               width: $radius;
               
@@ -375,7 +375,7 @@ strong{
             height: 15px;
             width: 15px;
             @include responsive($responsive){
-              $radius:10px;
+              $radius:5px;
               height: $radius;
               width: $radius;
               
