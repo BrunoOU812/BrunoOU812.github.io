@@ -105,9 +105,6 @@ const hamburguer = ()=>{
     const visibility= switchContent==true?"hidden":"visible";    
     values(open,close,visibility);
 }
-document.querySelector(".nav__ul").style.visibility="hidden";
-values("block","none","hidden");
-document.querySelector(".nav__ul").addEventListener("click",hamburguer);
 document.querySelector(".nav__button--hamburguer").addEventListener("click",hamburguer);
   
 
@@ -122,5 +119,3 @@ window.addEventListener("resize", function() {
     document.querySelector(".nav__ul").addEventListener("click",hamburguer);
 }
   });
-
-  document.querySelector(".nav__li").addEventListener("click",scrollTo((window.innerHeight/100)*400))

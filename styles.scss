@@ -66,7 +66,7 @@ strong{
 }
   
 .footer {
-    height: 30vh;
+    // height: 30vh;
     background: #000000;
 }
 .header {
@@ -241,6 +241,7 @@ strong{
         }
     }
     &__ul{
+      visibility: visible;
         display: flex;
         align-items: center;
         justify-content: space-between;
