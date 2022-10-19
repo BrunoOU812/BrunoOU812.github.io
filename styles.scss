@@ -37,6 +37,10 @@ $project-width:718px;
     scroll-behavior: smooth;
     text-align: justify;
     scroll-padding-top: 10vh;
+    @include responsive($responsive){
+    scroll-padding-top: 8vh;
+
+    }
 
 }
 
@@ -676,7 +680,7 @@ strong{
       top: 8vh;
     }
   &__container {
-    background-color: #00f;
+    // background-color: #00f;
     display: flex;
     align-items: center;
     width: 40vw;
@@ -721,7 +725,7 @@ strong{
     }
   }
   &__paragraph{
-    background-color: #00f;
+    // background-color: #00f;
     height: 50vh;
     display: flex;
     align-items: center;
