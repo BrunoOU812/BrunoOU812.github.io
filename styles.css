@@ -250,6 +250,7 @@ strong {
 }
 @media screen and (max-width: 760px) {
   .nav__ul {
+    visibility: hidden;
     padding: 0;
     position: fixed;
     top: 8vh;
@@ -257,7 +258,6 @@ strong {
     min-width: 100vw;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    overflow-y: hidden;
   }
 }
 @media screen and (max-width: 960px) {
