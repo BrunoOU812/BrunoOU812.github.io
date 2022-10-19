@@ -149,6 +149,9 @@ strong{
       padding: 0.5vw 1vw;  
       // margin-left: auto;
       @include responsive($responsive){
+        position: fixed;
+        bottom: 0;
+        right: 2vw;
         opacity: 1;
         width: 22vw;
         padding: 1vw 0;  
@@ -677,6 +680,7 @@ strong{
       top: 8vh;
     }
   &__container {
+    background-color: #00f;
     display: flex;
     align-items: center;
     width: 40vw;
@@ -721,6 +725,7 @@ strong{
     }
   }
   &__paragraph{
+    background-color: #00f;
     height: 50vh;
     display: flex;
     align-items: center;

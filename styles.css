@@ -127,6 +127,9 @@ strong {
 }
 @media screen and (max-width: 960px) {
   .header__icons {
+    position: fixed;
+    bottom: 0;
+    right: 2vw;
     opacity: 1;
     width: 22vw;
     padding: 1vw 0;
@@ -838,6 +841,7 @@ strong {
   }
 }
 .who__container {
+  background-color: #00f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,6 +908,7 @@ strong {
   }
 }
 .who__paragraph {
+  background-color: #00f;
   height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
