@@ -129,8 +129,7 @@ strong {
   .header__icons {
     opacity: 1;
     width: 22vw;
-    padding: 1vw 2vw;
-    margin-left: 50vw;
+    padding: 1vw 0;
   }
 }
 .header__img {
@@ -140,7 +139,7 @@ strong {
 }
 @media screen and (max-width: 960px) {
   .header__img {
-    width: 5vh;
+    width: 4.5vh;
   }
 }
 .header__img--linkedin {
@@ -180,6 +179,7 @@ strong {
     padding: 0;
     width: 100vw;
     height: 8vh;
+    z-index: 10;
   }
 }
 .nav__a {
@@ -247,12 +247,25 @@ strong {
 }
 @media screen and (max-width: 760px) {
   .nav__ul {
-    display: none;
+    visibility: hidden;
+    padding: 0;
+    position: fixed;
+    top: 8vh;
+    background: #000000;
+    min-width: 100vw;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow-y: hidden;
   }
 }
 @media screen and (max-width: 960px) {
   .nav__ul {
     width: 50vw;
+  }
+}
+@media screen and (min-width: 761px) {
+  .nav__ul {
+    visibility: visible;
   }
 }
 .nav__li {
@@ -266,6 +279,23 @@ strong {
 }
 @media screen and (max-width: 960px) {
   .nav__li {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 760px) {
+  .nav__li {
+    width: 100vw;
+    height: 8vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: rgba(255, 255, 255, 0.3) solid 1px;
     font-size: 2vw;
   }
 }
@@ -300,8 +330,8 @@ strong {
   bottom: -100px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 10vh 70vh 10vh;
-  grid-template-rows: 10vh 70vh 10vh;
+  -ms-grid-rows: 12vh 70vh 10vh;
+  grid-template-rows: 12vh 70vh 10vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

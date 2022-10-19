@@ -96,7 +96,7 @@ let switchContent=true;
 const values=(open,close,visibility)=>{
     document.querySelector("#open").style.display=open;
     document.querySelector("#close").style.display=close;
-    document.querySelector(".header__ul").style.visibility=visibility;
+    document.querySelector(".nav__ul").style.visibility=visibility;
 }
 const hamburguer = ()=>{
     switchContent=!switchContent;
@@ -107,3 +107,15 @@ const hamburguer = ()=>{
 }
 document.querySelector(".nav__button--hamburguer").addEventListener("click",hamburguer);
   
+
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth > 960) {
+    document.querySelector(".nav__ul").style.visibility="visible";
+    document.querySelector(".nav__ul").removeEventListener("click",hamburguer);
+}else{
+    document.querySelector(".nav__ul").style.visibility="hidden";
+    values("block","none","hidden");
+    document.querySelector(".nav__ul").addEventListener("click",hamburguer);
+}
+  });
