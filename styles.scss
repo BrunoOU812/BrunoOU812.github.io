@@ -233,7 +233,6 @@ strong{
         justify-content: space-between;
         width: 500px;
         @include responsive($medium){
-          visibility: hidden;
           padding: 0;
           position: fixed;
           top: 8vh;
@@ -244,9 +243,6 @@ strong{
         }
         @include responsive($large){
         width: 50vw;
-        }
-        @include antiresponsive(calc($medium + 1px)){
-          visibility: visible;
         }
 
     }

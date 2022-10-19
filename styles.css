@@ -250,7 +250,6 @@ strong {
 }
 @media screen and (max-width: 760px) {
   .nav__ul {
-    visibility: hidden;
     padding: 0;
     position: fixed;
     top: 8vh;
@@ -264,11 +263,6 @@ strong {
 @media screen and (max-width: 960px) {
   .nav__ul {
     width: 50vw;
-  }
-}
-@media screen and (min-width: 761px) {
-  .nav__ul {
-    visibility: visible;
   }
 }
 .nav__li {
