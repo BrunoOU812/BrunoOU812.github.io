@@ -205,13 +205,19 @@ strong{
         justify-content: space-between;
         width: 100px;
         @include responsive($medium){
-          display: none;
+          position: fixed;
+          left: 3vw;
+          width: 15vw;
         }
     }
     &__img{
         object-fit: cover;
     width: 40px;
-        &--linkedin {
+          opacity: 0.5;
+          &:hover{
+            opacity: 1;
+          }
+          &--linkedin {
             filter: brightness(10);
             object-fit: cover;
             object-position: 0px 0px;
@@ -221,6 +227,9 @@ strong{
             width: 45px;
             object-fit: cover;
             object-position: 0px 0px;
+        }
+        @include responsive($medium){
+          width: 30px;
         }
     }
     &__logo{

@@ -207,13 +207,19 @@ strong {
 }
 @media screen and (max-width: 760px) {
   .nav__icons {
-    display: none;
+    position: fixed;
+    left: 3vw;
+    width: 15vw;
   }
 }
 .nav__img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 40px;
+  opacity: 0.5;
+}
+.nav__img:hover {
+  opacity: 1;
 }
 .nav__img--linkedin {
   -webkit-filter: brightness(10);
@@ -230,6 +236,11 @@ strong {
      object-fit: cover;
   -o-object-position: 0px 0px;
      object-position: 0px 0px;
+}
+@media screen and (max-width: 760px) {
+  .nav__img {
+    width: 30px;
+  }
 }
 .nav__logo {
   -o-object-fit: cover;
