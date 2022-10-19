@@ -1,4 +1,26 @@
+$xxl:1600px;
+$extra:1200px;
+$large:960px;
+$medium:760px;
+$small:480px;
+$tiny:320px;
+
+@mixin responsive($size) {
+  @media screen and (max-width: $size){
+    @content;
+  }
+}
+$responsive:$large;
 $nav-height:10vh;
+$projectwidth:70vw;
+$pageHeight:25vh;
+$responsivefontsize:10vw;
+$responsivep:1.3vh;
+
+$project-width:718px;
+// @include responsive($medium){
+//   $project-width:90vw;
+// }
 
 *{
     margin: 0;
@@ -17,8 +39,8 @@ body{
 strong{
     font-weight: 400;
 }
-@mixin transition{
-    transition: all 300ms ease-in-out;
+@mixin transition($prop:all){
+    transition: $prop 300ms ease-in-out;
 
 } 
 
@@ -47,6 +69,8 @@ strong{
     background-size: 250vh;
     background-repeat: no-repeat;
     object-fit:cover;
+    @include responsive($responsive){
+    }
     &__background{
         padding: 100px;
         background: linear-gradient(45deg, rgba(#00f,.3), rgba(#f0f,.3), rgba(#f60,.3), rgba(#ff0,0.3) 85.71%),;
@@ -54,11 +78,22 @@ strong{
             align-items: center;
             width: 100%;
             height: calc(100% - 200px);
+            
+      @include responsive($responsive){ 
+        padding-left: 0;     
+        justify-content: center;
+        flex-wrap: wrap;
+        
+      }
     }
     &__container{
         display: flex;
         flex-wrap: wrap;
-        width: 1000px;
+        width: 38.3vw;
+        @include responsive($responsive){
+          width: 100%;
+          padding: 10px;
+        }
     }
     &__h1{
         font-family: 'abril fatface';
@@ -67,6 +102,10 @@ strong{
         color: white;
         background-color: #000000;
         display: inline;
+      @include responsive($large){
+        font-size: 9.5vw;
+        padding: 1.5vw 2vw;
+      }
     }
     &__h2{
         z-index: 1;
@@ -76,6 +115,12 @@ strong{
         color: white;
         background-color: #000000;
         display: inline;
+      @include responsive($large){
+        font-size: 4.8vw;
+        padding: 1vw 2vw;
+        margin-bottom: -4vw;
+      }
+
     }
   &__li {
   }
@@ -83,10 +128,39 @@ strong{
   }
   &__ul {
   }
+  &__icons{
+    opacity: 0;
+    background-color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 5.5vw;
+      margin-top: 1vw;
+      margin-left: 1vw;
+      padding: 0.5vw 1vw;  
+      // margin-left: auto;
+      @include responsive($responsive){
+        opacity: 1;
+        width: 15vw;
+        padding: 1vw 2vw;  
+      }
+  }
+  &__img{
+    object-fit: cover;
+    width: 2vw;
+    @include responsive($responsive){
+      width: 3vh;
+    }
+    &--linkedin {
+        filter: brightness(10);
+        object-fit: cover;
+        object-position: 0px 0px;
+    }
+}
 }
 
 .nav{
-    @include transition();
+    @include transition(background-color);
     z-index: 2;
     color: white;
     background-color:rgba( #000000,1);
@@ -97,6 +171,7 @@ strong{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     &__a{
         text-decoration: none;
     }
@@ -129,7 +204,7 @@ strong{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 25vw;
+        width: 500px;
     }
     &__li{
         list-style:none;
@@ -143,18 +218,25 @@ strong{
     
 }
 .projects {
-    padding: 10vh 0 6vh 0;
     bottom: -100px;
     display: grid;
-    grid-template-rows: 50px 620px 50px;
-    flex-direction: column;
+    grid-template-rows: 10vh 70vh 10vh;
     justify-content: center;
-    align-items: center;
     max-width: 100vw;
     background-color: #fff;
+    @include responsive($large){
+      max-width: 90vh;
+      flex-wrap: wrap;
+    grid-template-rows: 10vh 1fr 10vh;
+    }
+
     &__a{
         color: transparent;
         @include transition();
+        @include responsive($large){
+          max-width: $projectwidth;
+          max-height: $pageHeight;
+        }
         &--hover{
             filter: blur(2px) saturate(100%) brightness(100%);
             color: #fff;
@@ -165,25 +247,45 @@ strong{
         justify-content: center;
         align-items: center;
         height: 50px;
-        // width: 100%;
     }
     &__circle{
         @include transition();
         background-color: black;
         border-radius: 50%;
         margin: 0 20px;
+        @include responsive($responsive){
+          margin-bottom: 5vh;
+        }
         
         &--0{
-            height: 25px;
-            width: 25px;
+            $radius:25px;
+            height: $radius;
+            width: $radius;
+            @include responsive($responsive){
+              $radius:20px;
+              height: $radius;
+              width: $radius;
+            }
         }
         &--1{
             height: 20px;
             width: 20px;
+            @include responsive($responsive){
+              $radius:15px;
+              height: $radius;
+              width: $radius;
+              
+            }
         }
         &--2{
             height: 15px;
             width: 15px;
+            @include responsive($responsive){
+              $radius:10px;
+              height: $radius;
+              width: $radius;
+              
+            }
         }
     }
     &__clickhere{
@@ -198,6 +300,10 @@ strong{
         font-size: 50px;
         color: transparent;        
         border-radius:30px;
+        @include responsive($large){
+          max-width: $projectwidth;
+          max-height: $pageHeight;
+        }
         &--hover{
             color: #fff;
             background: rgba(black, 0.7);
@@ -207,18 +313,27 @@ strong{
     height: 420px;
     width: calc((720px *2) + 95px );
         display: flex;
-        overflow: hidden;
+        overflow-x: hidden;
+        
+    @include responsive($large){
+      // background-color: #f0f;
+      height:65vh;
+      max-width: $projectwidth;
+    }
     }
     &__display {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space;
     align-items: center;
     width: 100%;
     margin:5vw 0;
+    @include responsive($large){
+      // background-color: yellow;
+      max-width: 100vw;
+    }
+
     }
     &__h2 {
-        padding: 0;
         width: 100%;
         text-align: center;
         font-size: 100px;
@@ -226,28 +341,57 @@ strong{
         font-size: 100px;
         font-family: 'abril fatface';
         }
+      @include responsive($large){
+        padding-top: 2vh;
+        font-size: 10vw;
+        &--strong{
+          font-size: $responsivefontsize;
+        }
+      }
+
     }
     &__h3 {
     font-size: 50px;
         margin: 0;
         margin-bottom: 10px;
         width: 720px;
+        @include responsive($large){
+          // margin-bottom: 25px;
+          font-size: 3vh;
+        }
     }
     &__icons {
         display: flex;
         justify-content: space-between;
         width: 120px;
         height: 60px;
+        @include responsive($responsive){
+          width: $projectwidth;
+          justify-content: space-evenly;
+        }
     }
     &__img {
             @include transition;
             object-fit: cover;
-        width: 50px;
+            $size:50px;
+            height: $size;
+            width: $size;
+            @include responsive($responsive){
+              $size:4vh;
+              height: $size;
+              width: $size;
+            }
         &--netlify {
             object-fit: cover;
             object-position: 0px 0px;
-            height: 50px;
-            width: 50px;
+            $size:50px;
+            height: $size;
+            width: $size;
+            @include responsive($responsive){
+              $size:4vh;
+              height: $size;
+              width: $size;
+            }
         }
         &:hover{
             height: 60px;
@@ -260,7 +404,15 @@ strong{
       flex-direction: column;
       justify-content:space-between;
       max-width:720px;
-      height: 420px;
+      // height: 420px;
+      @include responsive($large){
+        padding-top: 2vh;
+        flex-grow: 1;
+        // background-color: green;
+        max-width: $projectwidth;
+        // min-height: 46.5vh;
+        justify-content: space-between;
+      }
     }
 &__new{    
     z-index: 20;
@@ -273,32 +425,54 @@ strong{
   &__p {
     font-weight: 400;
     width: calc(100% - (20px * 2));
+    @include responsive($large){
+      // background-color: #f60;
+      flex-grow: 1;
+      width: 100%;
+      font-size: 1.3vh;
+      // font-size: $responsivep;
+    }
   }
   &__page{
     color: transparent;
     border:1px solid rgba($color: #000000, $alpha: 0.5);
-    margin-right: 100px;
     overflow:hidden;
     max-width:718px;
     height:418px; 
     border-radius:30px;
+    @include responsive($large){
+      max-width: calc($projectwidth - 2px);
+      max-height: calc($pageHeight - 2px);
+    }
   }
   &__project {
     @include transition();
     transform: translateX(calc(0 * (-1 * ((720px *2) + 95px ))));
     display: flex;
-    width: calc((720px *2) + 95px );
+    justify-content: space-between;
+    min-width: calc((720px *2) + 95px );
     height: 420px;
+    @include responsive($large){
+      // background-color: red;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: $projectwidth;
+      min-height: 65vh;
+    }
   }
   &__screenshot {
     overflow:hidden;
-    min-width:718px;
+    min-width:$project-width;
     height:418px; 
     border-radius:30px;
     pointer-events: none;
     border: none;
     object-fit:fill;
     margin-right:95px ;
+    @include responsive($large){
+      max-width: $projectwidth;
+    }
+
   }
   &__widget {
     @include transition;
@@ -307,11 +481,19 @@ strong{
     font-size: 30px;
     justify-content: center;
     line-height: 48px;
-    width: 50px;
-    height: 50px;
+    $size:50px;
+    width: $size;
+    height: $size;
     margin: 0 5px;
     border: 1px solid rgba($color: #000000, $alpha: 0.0);
     border-radius: 50%;
+    @include responsive($responsive){
+      $size:8vw;
+      width: $size;
+      height: $size;
+      font-size: 6vw;
+      line-height: 8vw;
+    }
     &:hover{
         border: 1px solid rgba($color: #000000, $alpha: 0.5);
     }
@@ -335,18 +517,28 @@ strong{
     justify-content: center;
     height: 90vh;
     max-width: 100vw;
-    background: #fff;
+      padding-top: 20vh;
+      background: #fff;
+    @include responsive($responsive){
+      padding-top: 5vh;
+    }
   &__container {
     display: flex;
     justify-content: space-between;
     width: 60vw;
-
+    @include responsive($responsive){
+      flex-wrap: wrap;
+      height: 40vh;
+    }
   }
   &__h2 {
     font-family: 'abril fatface';
     font-size: 100px;
     margin-bottom: 5vh;
     margin-top: -20vh;
+    @include responsive($large){
+      font-size: $responsivefontsize;
+    }
   }
   &__h3 {
     text-align: center;
@@ -354,15 +546,33 @@ strong{
     font-weight: 400;
     margin-top: 3vh;
   }
+  &__logo{
+    margin: 5vh 2vh;
+    height: 10vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
   &__img {
-    $size:8vw;
     object-fit: contain;
+    $size:8vw;
     width: $size;
     height: $size;
+    @include responsive($responsive){
+      $size:9vh;
+      width: $size;
+      height: $size;
+    }
+  }
+  &__precontainer{
+    height: 60vh;
   }
   &--hover{
     opacity: 1;
   }
+  
 }
 .who {
     position: fixed;
@@ -382,30 +592,53 @@ strong{
     align-items: center;
     width: 40vw;
     justify-content: space-around;
+    @include responsive($responsive){
+      // flex-wrap: wrap;
+      flex-direction: column;
+      width: 80vw;
+      margin-bottom: 2vh;
+    }
   }
   &__h2 {
     $size:110px;
     font-size: $size;
     font-family: 'abril fatface';
     &--sans{
-    font-size: calc($size - 0.6vw);
-}
+      font-size: calc($size - 0.6vw);        
+      @include responsive($large){
+        font-size: calc($responsivefontsize + 5vw);
+      }
+    }
+    @include responsive($large){
+      font-size: calc($responsivefontsize + 5vw);
+    }
   }
   &__img {
     box-sizing: border-box;
     object-fit: cover;
     width: 150px;
-    border-radius: 50%;
+    border-radius: 50%;    
+    @include responsive($responsive){
+      width: calc($responsivefontsize + 20vw);
+    }
   }
   &__p {
     width: 40vw;
     columns: 300px;
     column-gap: 50px;
+    @include responsive($large){
+      font-size: $responsivep;
+      width: 80vw;
+    }
   }
   &__paragraph{
     height: 50vh;
     display: flex;
     align-items: center;
+    @include responsive($large){
+      flex-direction: column;
+      flex-grow: 1;
+    }
   }
 }
 .whotech{

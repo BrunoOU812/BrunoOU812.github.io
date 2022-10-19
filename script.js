@@ -31,6 +31,12 @@ const next=()=>{
     circle.forEach((item,i)=>item.classList.add(size[i]));
 } 
 
+
+window.addEventListener("resize", function() {
+    console.log(window.innerWidth<760?"$medium:760px;":window.innerWidth
+        );
+  });
+
 document.querySelector(".projects__widget--left").addEventListener("click",()=>index>0?prev():"");
 document.querySelector(".projects__widget--right").addEventListener("click",()=>index<4?next():"");
 
