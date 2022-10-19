@@ -122,3 +122,5 @@ window.addEventListener("resize", function() {
     document.querySelector(".nav__ul").addEventListener("click",hamburguer);
 }
   });
+
+  document.querySelector(".nav__li").addEventListener("click",scrollTo((window.innerHeight/100)*400))
