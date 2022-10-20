@@ -66,9 +66,31 @@ strong{
 }
   
 .footer {
-    // height: 30vh;
-    background: #000000;
+    z-index: 20;
+    height: 15vh;
+    background: #556;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row-reverse;
+    @include responsive($medium){
+    height: 14.2vh;
+    padding: 1vh;
+    justify-content: center;
+    }
+    &__icons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 17vw;
+        height: 4.8vh;
+        // background-color: #f0f;
+        @include responsive($medium){
+        justify-content: space-evenly;
+        width: 100%;
+        }
+    }
 }
+
 .header {
     position: fixed;
     z-index: -1;
@@ -605,44 +627,32 @@ strong{
   }
 }
 .technologies {
-    // transform: translateX(100vw);
     display: flex;
-    top: 10vh;
-    width: 100vw;
-    position: fixed;
-    z-index: -1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 70vh;
     max-width: 100vw;
-      padding-top: 20vh;
-      background: #fff;
+    background: #fff;
     @include responsive($medium){
-      height: 92vh;
-      top: 8vh;
+      height: 75.6vh;
     }
-    @include responsive($responsive){
-    transform: translateX(0);
-    transform: translateY(100vh);
-    padding-top: 5vh;
-    }
+
   &__container {
     display: flex;
     justify-content: space-between;
     width: 60vw;
+    height: 35vh;
     @include responsive($responsive){
-      flex-wrap: wrap;
-      height: 40vh;
+    height: 60vh;
+    flex-wrap: wrap;
     }
   }
   &__h2 {
     font-family: 'abril fatface';
     font-size: 100px;
-    margin-bottom: 5vh;
-    margin-top: -20vh;
     @include responsive($large){
-      font-size: $responsivefontsize;
+      font-size: 10vw;
     }
   }
   &__h3 {
@@ -666,13 +676,10 @@ strong{
     width: $size;
     height: $size;
     @include responsive($responsive){
-      $size:9vh;
+      $size:8vh;
       width: $size;
       height: $size;
     }
-  }
-  &__precontainer{
-    height: 60vh;
   }
   &--hover{
     opacity: 1;
@@ -680,6 +687,7 @@ strong{
   
 }
 .who {
+    opacity: 0;
     position: fixed;
     top: 10vh;
     z-index: -1;
@@ -692,6 +700,9 @@ strong{
     background: #000000;
     padding-top: 3vh;
     color: #fff;
+    &--hover{
+      opacity: 1;
+    }
     @include responsive($medium){
       height: 92vh;
       top: 8vh;
@@ -737,7 +748,7 @@ strong{
     columns: 300px;
     column-gap: 50px;
     @include responsive($large){
-      font-size: $responsivep;
+      font-size:15px;
       width: 80vw;
     }
   }
@@ -751,16 +762,4 @@ strong{
       flex-grow: 1;
     }
   }
-}
-.whotech{
-    opacity: 0;
-    width:90vw; 
-    height:80vh; 
-    overflow:hidden;
-    @include responsive($responsive){
-
-    }
-    &--hover{
-      opacity: 1;
-    }
 }
