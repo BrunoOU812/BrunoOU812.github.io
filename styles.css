@@ -390,7 +390,6 @@ strong {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 100vw;
   background-color: #fff;
 }
 @media screen and (max-width: 760px) {
@@ -442,11 +441,6 @@ strong {
   background-color: black;
   border-radius: 50%;
   margin: 0 20px;
-}
-@media screen and (max-width: 960px) {
-  .projects__circle {
-    margin-bottom: 5vh;
-  }
 }
 .projects__circle--0 {
   height: 25px;
@@ -518,7 +512,7 @@ strong {
 }
 @media screen and (max-width: 960px) {
   .projects__container {
-    height: 65vh;
+    height: 67.5vh;
     max-width: 70vw;
   }
 }
@@ -577,11 +571,14 @@ strong {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 120px;
-  height: 60px;
 }
 @media screen and (max-width: 960px) {
   .projects__icons {
     width: 70vw;
+    height: 10vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -634,14 +631,12 @@ strong {
 }
 @media screen and (max-width: 960px) {
   .projects__infobox {
-    padding-top: 2vh;
+    padding-top: 1.5vh;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    margin-bottom: -2vh;
     max-width: 70vw;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 .projects__new {
@@ -677,7 +672,7 @@ strong {
 @media screen and (max-width: 960px) {
   .projects__page {
     max-width: calc(70vw - 2px);
-    max-height: calc(25vh - 2px);
+    max-height: calc(25vh - 1px);
   }
 }
 .projects__project {
@@ -946,7 +941,7 @@ strong {
   }
 }
 .who__paragraph {
-  margin-top: 2vh;
+  margin-top: 2vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

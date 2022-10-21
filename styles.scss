@@ -338,7 +338,7 @@ strong{
     display: grid;
     grid-template-rows: 12vh 70vh 10vh;
     justify-content: center;
-    max-width: 100vw;
+    // max-width: 100vw;
     background-color: #fff;
     @include responsive($medium){
       height: 92vh;
@@ -354,6 +354,7 @@ strong{
         color: transparent;
         @include transition();
         @include responsive($large){
+          // background-color: #f0f;          
           max-width: $projectwidth;
           max-height: $pageHeight;
         }
@@ -374,7 +375,7 @@ strong{
         border-radius: 50%;
         margin: 0 20px;
         @include responsive($responsive){
-          margin-bottom: 5vh;
+          // margin-bottom: 5vh;
         }
         
         &--0{
@@ -437,7 +438,7 @@ strong{
         
     @include responsive($large){
       // background-color: #f0f;
-      height:65vh;
+      height:67.5vh;
       max-width: $projectwidth;
     }
     }
@@ -484,9 +485,12 @@ strong{
         display: flex;
         justify-content: space-between;
         width: 120px;
-        height: 60px;
+        // height: 60px;
         @include responsive($responsive){
           width: $projectwidth;
+          // background-color: #f0f;
+          height: 10vh;
+          align-items: center;
           justify-content: space-evenly;
         }
     }
@@ -521,17 +525,19 @@ strong{
     }
     &__infobox {
       display: flex;
+      // background-color: #f60;
       flex-direction: column;
       justify-content:space-between;
       max-width:720px;
       // height: 420px;
       @include responsive($large){
-        padding-top: 2vh;
+        padding-top: 1.5vh;
         flex-grow: 1;
+        margin-bottom: -2vh;
         // background-color: green;
         max-width: $projectwidth;
         // min-height: 46.5vh;
-        justify-content: space-between;
+        // justify-content: space-between;
       }
     }
 &__new{    
@@ -545,11 +551,13 @@ strong{
   &__p {
     font-weight: 400;
     width: calc(100% - (20px * 2));
+    // background-color: green;
     @include responsive($large){
       // background-color: #f60;
       flex-grow: 1;
       width: 100%;
       font-size: 1.3vh;
+      // height: 100px;
       // font-size: $responsivep;
     }
   }
@@ -562,7 +570,7 @@ strong{
     border-radius:30px;
     @include responsive($large){
       max-width: calc($projectwidth - 2px);
-      max-height: calc($pageHeight - 2px);
+      max-height: calc($pageHeight - 1px);
     }
   }
   &__project {
@@ -590,6 +598,7 @@ strong{
     object-fit:fill;
     margin-right:95px ;
     @include responsive($large){
+      // height: 40vh;
       max-width: $projectwidth;
     }
 
@@ -752,9 +761,7 @@ strong{
     }
   }
   &__paragraph{
-    // background-color: #00f;
-    // height: 50vh;
-    margin-top: 2vh;
+    margin-top: 2vw;
     display: flex;
     align-items: center;
     @include responsive($large){
