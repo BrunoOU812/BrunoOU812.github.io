@@ -292,7 +292,6 @@ strong {
   }
 }
 .nav__ul {
-  visibility: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -791,7 +790,7 @@ strong {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 60vw;
+  width: 65vw;
   height: 35vh;
 }
 @media screen and (max-width: 960px) {
@@ -902,11 +901,11 @@ strong {
   }
 }
 .who__h2 {
-  font-size: 110px;
+  font-size: 6vw;
   font-family: "abril fatface";
 }
 .who__h2--sans {
-  font-size: calc(110px - 0.6vw);
+  font-size: 5.4vw;
 }
 @media screen and (max-width: 960px) {
   .who__h2--sans {
@@ -923,7 +922,7 @@ strong {
           box-sizing: border-box;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 150px;
+  width: 8vw;
   border-radius: 50%;
 }
 @media screen and (max-width: 960px) {
@@ -947,7 +946,7 @@ strong {
   }
 }
 .who__paragraph {
-  height: 50vh;
+  margin-top: 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -957,6 +956,7 @@ strong {
 }
 @media screen and (max-width: 960px) {
   .who__paragraph {
+    margin-top: 0vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

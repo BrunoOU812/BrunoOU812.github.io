@@ -263,7 +263,6 @@ strong{
         }
     }
     &__ul{
-      visibility: visible;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -641,7 +640,7 @@ strong{
   &__container {
     display: flex;
     justify-content: space-between;
-    width: 60vw;
+    width: 65vw;
     height: 35vh;
     @include responsive($responsive){
     height: 60vh;
@@ -721,7 +720,7 @@ strong{
     }
   }
   &__h2 {
-    $size:110px;
+    $size:6vw;
     font-size: $size;
     font-family: 'abril fatface';
     &--sans{
@@ -737,7 +736,7 @@ strong{
   &__img {
     box-sizing: border-box;
     object-fit: cover;
-    width: 150px;
+    width: 8vw;
     border-radius: 50%;    
     @include responsive($responsive){
       width: calc($responsivefontsize + 20vw);
@@ -754,10 +753,12 @@ strong{
   }
   &__paragraph{
     // background-color: #00f;
-    height: 50vh;
+    // height: 50vh;
+    margin-top: 2vh;
     display: flex;
     align-items: center;
     @include responsive($large){
+      margin-top: 0vh;
       flex-direction: column;
       flex-grow: 1;
     }
