@@ -58,10 +58,11 @@ hr{
   margin-top: 4vw; 
   opacity: 0.3;
   @include responsive($responsive){
-    position: fixed;
+    // position: fixed;
   // margin-top: -12vh; 
   bottom: 10vh;
   width: 50vw;
+  position: absolute;
   }
 }
 @mixin transition($prop:all){
@@ -73,10 +74,17 @@ hr{
     transform: scale(3);
     text-align: center;
   font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48;
+  &:hover{
+    font-variation-settings:
   'FILL' 1,
   'wght' 100,
   'GRAD' 0,
   'opsz' 48
+  }
 }
   
 .footer {
@@ -271,6 +279,9 @@ hr{
     &__logo{
         object-fit: cover;
         height: 40px;
+        &:hover{
+          opacity: 0.5;
+        }
         @include responsive($medium){
           height: 30px;
           // background-color: #f0f;
@@ -377,6 +388,20 @@ hr{
             color: #fff;
         }
     }
+
+    &__all{
+      color: #f60;
+      opacity: 0.5;
+      width: 1vw;
+      transform: scale(400%) translateY(-0.5vh) translateX(0.5vh);
+      &:hover{
+        cursor: pointer;
+      }
+      @include responsive($responsive){
+        transform: scale(200%) translateY(-0.2vh);
+      }
+    }
+
     &__circles{
         display: flex;
         justify-content: center;
@@ -770,8 +795,10 @@ hr{
     columns: 300px;
     column-gap: 50px;
     @include responsive($large){
-      font-size:15px;
+      font-size:14px;
+      font-weight: 400;
       width: 80vw;
+      opacity: 0.5;
     }
   }
   &__paragraph{
