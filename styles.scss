@@ -50,6 +50,20 @@ body{
 strong{
     font-weight: 400;
 }
+
+hr{
+  // display: none;
+  width:50vh ; 
+  border: 1px solid white; 
+  margin-top: 4vw; 
+  opacity: 0.3;
+  @include responsive($responsive){
+    position: fixed;
+  // margin-top: -12vh; 
+  bottom: 10vh;
+  width: 50vw;
+  }
+}
 @mixin transition($prop:all){
     transition: $prop 300ms ease-in-out;
 
@@ -735,7 +749,7 @@ strong{
     &--sans{
       font-size: calc($size - 0.6vw);        
       @include responsive($large){
-        font-size: calc($responsivefontsize + 5vw);
+        font-size: calc($responsivefontsize + 4.1vw);
       }
     }
     @include responsive($large){

@@ -17,6 +17,20 @@ strong {
   font-weight: 400;
 }
 
+hr {
+  width: 50vh;
+  border: 1px solid white;
+  margin-top: 4vw;
+  opacity: 0.3;
+}
+@media screen and (max-width: 960px) {
+  hr {
+    position: fixed;
+    bottom: 10vh;
+    width: 50vw;
+  }
+}
+
 .material-symbols-outlined {
   -webkit-transform: scale(3);
           transform: scale(3);
@@ -904,7 +918,7 @@ strong {
 }
 @media screen and (max-width: 960px) {
   .who__h2--sans {
-    font-size: 15vw;
+    font-size: 14.1vw;
   }
 }
 @media screen and (max-width: 960px) {
